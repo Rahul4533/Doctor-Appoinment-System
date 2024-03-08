@@ -28,10 +28,10 @@ app.use('/admin',require('./routes/adminRoutes'))
 app.use('/doctor',require('./routes/doctorRoutes'));
 
 //listen server
- app.use(express.static(path.join(__dirname, '/client/build')));
+ app.use(express.static(path.join(__dirname, './client/build')));
 
  app.get('*',function(req,res){
-const index=path.resolve(__dirname,'client','build','index.html');
+const index=path.join(__dirname,'./client/build/index.html');
    res.sendFile(index);
  })
 
