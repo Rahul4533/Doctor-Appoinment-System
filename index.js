@@ -34,8 +34,8 @@ app.use('/doctor',require('./routes/doctorRoutes'));
 const index=path.join(__dirname,'./client/build/index.html');
    res.sendFile(index);
  })
-
-
-app.listen(process.env.PORT,()=>{
+ const port=8080;
+ 
+app.listen(port,()=>{
     console.log(`Server is running in ${process.env.NODE_MODE} mode on port ${process.env.PORT}`.bgCyan.white);
 })
