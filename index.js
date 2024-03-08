@@ -30,7 +30,7 @@ app.use('/doctor',require('./routes/doctorRoutes'));
 //listen server
  app.use(express.static(path.join(__dirname, '/client/build')));
 
- http.get('*',function(req,res){
+ app.get('*',function(req,res){
 const index=path.resolve(__dirname,'client','build','index.html');
    res.sendFile(index);
  })
