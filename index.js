@@ -33,8 +33,8 @@ app.use('/doctor',require('./routes/doctorRoutes'));
  app.get("*",function(req,res){
     res.sendFile(path.join(__dirname,'./client/build/index.html'));
  })
-const port= 8080;
 
-app.listen(port,()=>{
+
+app.listen(process.env.PORT,()=>{
     console.log(`Server is running in ${process.env.NODE_MODE} mode on port ${process.env.PORT}`.bgCyan.white);
 })
